@@ -13,11 +13,14 @@ buttons.forEach((btn) => {
 
         const id = button.getAttribute("id");
 
-        button.querySelector(".color").classList.add("selected");
+        btn.querySelector(".color").classList.add("selected");
 
         image.classList.add("changing");
-        image.setAttribute("src" , `img/img-2-iphone13green${id}`);
-
+        image.setAttribute("src" , `img/img-2-iphone13green_${id}.jpg`);
+        
+        setTimeout(() => {
+            image.classList.toggle("changing");
+        }, 200);
       
     });
 
